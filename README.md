@@ -1,89 +1,101 @@
-# CYBERX-PRO-ULTIMATE-v3.0
-CYBERX PRO ULTIMATE v3.0 ADVANCED CYBERSECURITY RESEARCH TOOLKIT DEVELOPED BY: Mostafizur Rahman PLATFORM: ANDROID TERMUX DISCOVER • ANALYZE • PROTECT
-।CYBERX PRO ULTIMATE v3.0
-A single-file, Python-based defensive cybersecurity research toolkit designed for Android Termux and Python 3.
-Use this toolkit only on systems, websites, and files that you own or are explicitly authorized to assess.
-Features
-System information dashboard
-DNS and IP lookup
-Website HTTP security-header review
-TLS/SSL certificate check
-Limited TCP port audit (predefined common ports)
-Local password-strength estimate (password is not stored)
-File SHA-256 integrity check
-Basic source-code static review
-Public username profile-reference generator
-Catalog of 100 security tools and resources
-JSON reports, activity history, and log files
-Important: The 100-tool catalog is a reference list. It does not install or bundle those external tools. Availability depends on the operating system and installed software.
-Requirements
+CYBERX PRO ULTIMATE v3.0
+Android Termux ও Python 3-এর জন্য তৈরি একক-ফাইলভিত্তিক প্রতিরক্ষামূলক সাইবার নিরাপত্তা গবেষণা টুলকিট।
+সতর্কতা: এই টুলকিটটি শুধুমাত্র নিজের মালিকানাধীন সিস্টেম, ওয়েবসাইট ও ফাইল পরীক্ষা করার জন্য অথবা যথাযথ অনুমতি পাওয়া ক্ষেত্রে ব্যবহার করুন।
+✨ প্রধান ফিচারসমূহ
+সিস্টেম তথ্য ড্যাশবোর্ড: ডিভাইস ও সিস্টেম সম্পর্কিত প্রয়োজনীয় তথ্য দেখুন।
+DNS ও IP অনুসন্ধান: ডোমেইনের DNS এবং IP-সংক্রান্ত তথ্য যাচাই করুন।
+ওয়েবসাইটের HTTP নিরাপত্তা হেডার পরীক্ষা: ওয়েবসাইটের নিরাপত্তা হেডার পর্যালোচনা করুন।
+TLS/SSL সার্টিফিকেট যাচাই: ওয়েবসাইটের TLS/SSL সার্টিফিকেট পরীক্ষা করুন।
+সীমিত TCP পোর্ট অডিট: পূর্বনির্ধারিত সাধারণ পোর্টগুলো পরীক্ষা করুন।
+পাসওয়ার্ডের শক্তিমাত্রা যাচাই: পাসওয়ার্ড স্থানীয়ভাবে মূল্যায়ন করুন; পাসওয়ার্ড সংরক্ষণ করা হয় না।
+ফাইলের SHA-256 যাচাই: ফাইলের অখণ্ডতা পরীক্ষা করুন।
+সোর্স কোডের প্রাথমিক পর্যালোচনা: সাধারণ কিছু প্যাটার্নের ভিত্তিতে কোড পরীক্ষা করুন।
+পাবলিক ইউজারনেম রেফারেন্স: বিভিন্ন পাবলিক প্রোফাইলের রেফারেন্স লিংক তৈরি করুন।
+১০০টি নিরাপত্তা টুলের তালিকা: নিরাপত্তা-সম্পর্কিত টুল ও রিসোর্সের ক্যাটালগ দেখুন।
+রিপোর্ট ও লগ: JSON রিপোর্ট, কার্যক্রমের ইতিহাস এবং লগ ফাইল তৈরি করুন।
+বিশেষ দ্রষ্টব্য: ১০০টি টুলের তালিকাটি কেবল তথ্যসূত্র হিসেবে দেওয়া হয়েছে। এই প্রকল্প সেগুলো স্বয়ংক্রিয়ভাবে ইনস্টল করে না বা নিজের সঙ্গে যুক্ত করে রাখে না। কোন টুল ব্যবহার করা যাবে, তা আপনার অপারেটিং সিস্টেম ও ইনস্টল করা সফটওয়্যারের ওপর নির্ভর করবে।
+🧰 প্রয়োজনীয় উপকরণ
 Python 3
-Git (only needed to clone the GitHub repository)
-Android Termux, Linux, or another Python 3 environment
-Internet access for DNS, HTTP, and TLS checks
-The script uses Python standard-library modules; no third-party Python package is required for the current features.
-Install on Android (Termux)
-Open Termux and run:
+Git (শুধুমাত্র GitHub থেকে প্রজেক্ট ক্লোন করার জন্য)
+Android Termux, Linux অথবা Python 3 সমর্থিত অন্য কোনো পরিবেশ
+DNS, HTTP ও TLS পরীক্ষা করার জন্য ইন্টারনেট সংযোগ
+বর্তমান ফিচারগুলো চালাতে Python-এর স্ট্যান্ডার্ড লাইব্রেরিই যথেষ্ট। আলাদা কোনো থার্ড-পার্টি Python প্যাকেজ ইনস্টল করার প্রয়োজন নেই।
+📱 Android Termux-এ ইনস্টল ও চালানোর নিয়ম
+ধাপ ১: Termux প্রস্তুত করুন
+Termux খুলে নিচের কমান্ডগুলো একে একে চালান:
 pkg update -y && pkg upgrade -y
 pkg install python git -y
-Download from GitHub
-Replace YOUR_USERNAME and YOUR_REPOSITORY with your GitHub username and repository name:
+ধাপ ২: GitHub থেকে প্রজেক্ট ডাউনলোড করুন
+নিচের কমান্ডে YOUR_USERNAME-এর জায়গায় আপনার GitHub ইউজারনেম এবং YOUR_REPOSITORY-এর জায়গায় রিপোজিটরির নাম বসান।
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 cd YOUR_REPOSITORY
-Run
-If the Python file is named CYBERX PRO ULTIMATE v3.0.py:
+ধাপ ৩: টুলটি চালু করুন
+Python ফাইলের নাম যদি CYBERX PRO ULTIMATE v3.0.py হয়, তাহলে চালান:
 python "CYBERX PRO ULTIMATE v3.0.py"
-Or rename it to a shorter filename:
+অথবা, ফাইলের নাম ছোট করে cyberx_pro.py রাখতে চাইলে:
 mv "CYBERX PRO ULTIMATE v3.0.py" cyberx_pro.py
 python cyberx_pro.py
-Install on Linux
+🐧 Linux-এ ইনস্টল ও চালানোর নিয়ম
+টার্মিনালে নিচের কমান্ডগুলো চালান:
 sudo apt update
 sudo apt install -y python3 git
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 cd YOUR_REPOSITORY
 python3 "CYBERX PRO ULTIMATE v3.0.py"
-Upload the project to GitHub
-First, create an empty repository on GitHub. Then, from the project folder, run:
+☁️ GitHub-এ প্রজেক্ট আপলোড করার নিয়ম
+প্রথমে GitHub-এ একটি খালি Repository তৈরি করুন। এরপর প্রজেক্টের ফোল্ডারে গিয়ে নিচের কমান্ডগুলো চালান:
 git init
 git add "CYBERX PRO ULTIMATE v3.0.py" README.md
 git commit -m "Initial release: CYBERX PRO ULTIMATE v3.0"
 git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 git push -u origin main
-If the remote named origin already exists, update it instead:
+যদি origin নামে Remote আগে থেকেই যুক্ত থাকে, তাহলে নতুন করে যোগ না করে নিচের কমান্ড ব্যবহার করুন:
 git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 git push -u origin main
-Run options
-Environment        Command
-Termux / Android   python "CYBERX PRO ULTIMATE v3.0.py" Linux              python3 "CYBERX PRO ULTIMATE v3.0.py" After renaming     python cyberx_pro.py
-Output files
-When the application runs, it creates these items in the same directory as the script:
-reports/ --- JSON audit reports
-logs/ --- activity log
-cyberx_history.json --- recent activity history
-Keep generated reports and logs private if they contain information about your systems.
-Menu
-Dashboard / System Info
-DNS & IP Lookup
-Website HTTP Security Headers
-TLS / SSL Certificate Check
-Limited TCP Port Audit
-Local Password Strength Check
-File SHA-256 Integrity Check
-Source Code Static Review
-Public Username OSINT References
-100-Tool Catalog
-Activity History
-Exit
-Responsible use and limitations
-Obtain permission before testing a website, host, or network.
-The port audit checks only the predefined ports in the script; it is not a full vulnerability scan.
-The source-code review uses basic pattern matching and can produce false positives or miss issues.
-Generated public-profile URLs are references only; the script does not verify that profiles exist.
-The password-strength feature is a simple local estimate, not a password-cracking or breach-checking service.
-The tool catalog does not mean those tools are installed, available, or integrated.
-Do not use this project to access accounts, devices, networks, or data without authorization.
-License
-Choose and add a license before publishing if you want to define how others may use, modify, and redistribute this project. Do not claim a license that you have not added.
-Author
-Add your GitHub username or project-maintainer details here.
+▶️ চালানোর কমান্ড এক নজরে
+পরিবেশ
+কমান্ড
+Termux / Android
+python "CYBERX PRO ULTIMATE v3.0.py"
+Linux
+python3 "CYBERX PRO ULTIMATE v3.0.py"
+ফাইলের নাম পরিবর্তনের পর
+python cyberx_pro.py
+📁 তৈরি হওয়া ফাইল ও ফোল্ডার
+টুলটি চালু হলে স্ক্রিপ্টের একই ডিরেক্টরিতে নিচের ফাইল ও ফোল্ডারগুলো তৈরি হবে:
+নাম
+কাজ
+reports/
+JSON ফরম্যাটে অডিট রিপোর্ট সংরক্ষণ
+logs/
+কার্যক্রমের লগ সংরক্ষণ
+cyberx_history.json
+সাম্প্রতিক কার্যক্রমের ইতিহাস সংরক্ষণ
+আপনার সিস্টেম-সংক্রান্ত সংবেদনশীল তথ্য থাকতে পারে—এমন রিপোর্ট ও লগ নিরাপদে এবং ব্যক্তিগতভাবে সংরক্ষণ করুন।
+🗂️ টুলের মেনু
+ড্যাশবোর্ড / সিস্টেম তথ্য
+DNS ও IP অনুসন্ধান
+ওয়েবসাইটের HTTP নিরাপত্তা হেডার পরীক্ষা
+TLS / SSL সার্টিফিকেট যাচাই
+সীমিত TCP পোর্ট অডিট
+স্থানীয়ভাবে পাসওয়ার্ডের শক্তিমাত্রা যাচাই
+ফাইলের SHA-256 অখণ্ডতা পরীক্ষা
+সোর্স কোডের প্রাথমিক পর্যালোচনা
+পাবলিক ইউজারনেম OSINT রেফারেন্স
+১০০টি নিরাপত্তা টুলের ক্যাটালগ
+কার্যক্রমের ইতিহাস
+প্রস্থান
+🔐 দায়িত্বশীল ব্যবহার ও সীমাবদ্ধতা
+কোনো ওয়েবসাইট, হোস্ট বা নেটওয়ার্ক পরীক্ষা করার আগে মালিকের অনুমতি নিন।
+পোর্ট অডিট ফিচারটি কেবল স্ক্রিপ্টে নির্ধারিত পোর্টগুলো পরীক্ষা করে। এটি পূর্ণাঙ্গ Vulnerability Scan নয়।
+সোর্স কোড পর্যালোচনাটি সাধারণ প্যাটার্ন শনাক্তকরণের ওপর নির্ভরশীল। এতে ভুল সতর্কতা আসতে পারে, আবার কিছু সমস্যা শনাক্ত নাও হতে পারে।
+তৈরি করা পাবলিক প্রোফাইল URL কেবল রেফারেন্স। সংশ্লিষ্ট প্রোফাইল বাস্তবে আছে কি না, স্ক্রিপ্ট তা যাচাই করে না।
+পাসওয়ার্ড যাচাই ফিচারটি একটি সাধারণ স্থানীয় মূল্যায়নমাত্র। এটি পাসওয়ার্ড ক্র্যাকিং বা ডেটা ফাঁস হওয়া পাসওয়ার্ড যাচাইয়ের সেবা নয়।
+টুল ক্যাটালগে কোনো টুলের নাম থাকা মানেই সেটি আপনার ডিভাইসে ইনস্টল, উপলভ্য বা এই প্রজেক্টের সঙ্গে সমন্বিত—এমন নয়।
+অনুমতি ছাড়া অন্যের অ্যাকাউন্ট, ডিভাইস, নেটওয়ার্ক বা তথ্য ব্যবহারের চেষ্টা করবেন না।
+📄 লাইসেন্স
+প্রজেক্টটি প্রকাশ বা অন্যদের ব্যবহারের জন্য উন্মুক্ত করার আগে উপযুক্ত একটি লাইসেন্স যুক্ত করুন। লাইসেন্স যুক্ত না করে কোনো নির্দিষ্ট লাইসেন্সের দাবি করবেন না।
+👨‍💻 নির্মাতা / রক্ষণাবেক্ষণকারী
+এখানে আপনার GitHub ইউজারনেম অথবা প্রজেক্টের রক্ষণাবেক্ষণকারীর তথ্য যুক্ত করুন।
+CYBERX PRO ULTIMATE v3.0 — দায়িত্বশীল ও অনুমোদিত সাইবার নিরাপত্তা পরীক্ষার জন্য তৈরি একটি সহায়ক টুলকিট।
